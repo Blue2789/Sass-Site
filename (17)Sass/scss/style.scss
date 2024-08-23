@@ -1,0 +1,84 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: 'Arial', sans-serif;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Global Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-stack;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+// Header
+.main-header {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+
+    nav ul {
+        list-style: none;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+
+// Hero Section
+.hero {
+    background: url('../images/hero.jpg') no-repeat center center/cover;
+    height: 400px;
+    color: white;
+    @include flex-center;
+    text-align: center;
+}
+
+// Content Section
+.content {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 1000px;
+
+    h2 {
+        margin-bottom: 10px;
+        color: $primary-color;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+}
+
+// Footer
+.main-footer {
+    background-color: $primary-color;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
